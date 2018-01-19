@@ -4,7 +4,7 @@ Function akan me-return string yang telah bersih dari berbagai simbol,
 hanya menyisakan a-z dan angka 0-9. */
 
 function hapusSimbol(str) {
-    return str.match(/\w+/g).join('');
+    return str.match(/[a-z0-9]/g).join('');
   }
   
   // TEST CASES
