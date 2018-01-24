@@ -26,7 +26,7 @@
  *      ENDIF
  */
 
-let listBarang =[['Sepatu Stacattu', 1500000], 
+var listBarang =[['Sepatu Stacattu', 1500000], 
                  ['Baju Zoro', 500000], 
                  ['Baju H&M', 250000], 
                  ['Sweater Uniklooh', 175000], 
