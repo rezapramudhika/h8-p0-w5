@@ -10,26 +10,26 @@ Contoh jika arr inputan adalah [45, 20, 21, 2, 7] maka output: [ [ 20, 2 ], [ 7 
 */
 
 /**PSEUDOCODE 
- * 1. Function angkaGenap(num)
+ * 1. Initialize angkaGenap to a function that recieve 1 parameter 'num'
  *      IF 'num' modulo 2 is equal to 0, THEN:
  *          RETURN true
  *      ELSE 
  *          RETURN false
  *      ENDIF
- * 2.Function angkaGanjil(num)
+ * 2. Initialize angkaGanjil to a function that recieve 1 parameter 'num'
  *      IF 'num' modulo 2 is not equal to 0, THEN:
  *          RETURN true
  *      ELSE 
  *          RETURN false
  *      ENDIF
- * 3. Function angkaKelipatanTiga(num)
+ * 3. Initialize angkaKelipatanTiga to a function that recieve 1 parameter 'num'
  *      IF 'num' modulo 3 is equal to 0, THEN:
  *          RETURN true
  *      ELSE 
  *          RETURN false
  *      ENDIF
- * 4. Function mengelompokkanAngka(arr)
- *      Initialize 'newArr' to 3d empty array
+ * 4. Function mengelompokkanAngka(arr) 
+ *      Initialize 'newArr' to 2D empty array
  *      Set moveCount to 1
  *      FOR each value in 'arr':
  *          IF call function 'angkaKelipatanTiga' (arguments:value of arr[position]) is returning true, THEN:
