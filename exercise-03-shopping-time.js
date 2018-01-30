@@ -26,39 +26,32 @@
  *      ENDIF
  */
 
-var listBarang =[['Sepatu Stacattu', 1500000], 
+function shoppingTime(memberId, money) {
+    var listBarang =[['Sepatu Stacattu', 1500000], 
                  ['Baju Zoro', 500000], 
                  ['Baju H&M', 250000], 
                  ['Sweater Uniklooh', 175000], 
                  ['Casing Handphone', 50000]];
-
-function shoppingTime(arr1, arr2) {
-    var checkOut = {
+    var checkout = {
         memberId: '',
-        money: '',
+        money: 0,
         listPurchased: [],
-        changeMoney: 0
+        changeMoney: money
     }
-    if (arr1 === ''){
-        return 'Mohon maaf, toko X hanya berlaku untuk member saja';
-    }else if (arr2 === undefined && arr1 === undefined){
-        return 'Mohon maaf, toko X hanya berlaku untuk member saja';
+    if(memberId === '' || memberId === undefined){
+        return 'Mohon maaf, toko x hanya berlaku untuk member saja'
+    }else if(money<50000){
+        return 'Mohon maaf, uang tidak cukup'
     }else{
-        var moneyTemp = arr2;
+        checkout.memberId = memberId;
+        checkout.money = money;
         for (var i=0; i<=listBarang.length-1; i++){
-            if (moneyTemp >= listBarang[i][1]){
-                checkOut.listPurchased.push(listBarang[i][0]);
-                moneyTemp -= listBarang[i][1];
+            if(money >= listBarang[i][1]){
+                checkout.listPurchased.push(listBarang[i][0]);
+                checkout.changeMoney -= listBarang[i][1];
             }
         }
-        if(checkOut.listPurchased.length === 0){
-            return 'Mohon maaf, uang tidak cukup'
-        }else{
-            checkOut.memberId = arr1;
-            checkOut.money = arr2;
-            checkOut.changeMoney = moneyTemp;
-            return checkOut;
-        }
+        return checkout;
     }
   }
   
